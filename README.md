@@ -14,7 +14,7 @@ Accodal Technical Assessment simple webpage
 - Clone Repo
 
 ```
-git clone https://github.com/davecar21/accodal-restful-api.git
+git clone https://github.com/davecar21/accodal-webpage.git
 ```
 
 - Install package
