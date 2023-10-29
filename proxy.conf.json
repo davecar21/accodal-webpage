@@ -3,5 +3,10 @@
     "target": "https://www.timeapi.io",
     "secure": false,
     "changeOrigin": true
+  },
+  "/search": {
+    "target": "https://api.pexels.com/v1/",
+    "secure": false,
+    "changeOrigin": true
   }
 }

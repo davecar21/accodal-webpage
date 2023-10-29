@@ -5,19 +5,27 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { TimeConversionService } from './services/time-conversion.service';
+import { PexelsService } from './services/pexels.services';
 
 import { HttpClientModule } from '@angular/common/http';
+import { TimeConversionComponent } from './time-conversion/time-conversion.component';
+import { PexelsComponent } from './pexels/pexels.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    TimeConversionComponent,
+    PexelsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [TimeConversionService],
+  providers: [
+    TimeConversionService,
+    PexelsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

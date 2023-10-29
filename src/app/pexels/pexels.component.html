@@ -1,0 +1,18 @@
+<div class="pexels-container">
+    <div class="pexels-photo" *ngFor="let pexelPhoto of pexelPhotos" >
+        <img [src]="pexelPhoto.src.landscape" [alt]="pexelPhoto.alt">
+        <p class="photo-title">{{pexelPhoto.alt}}</p>
+        <p class="photo-photographer">{{pexelPhoto.photographer}}</p>
+        <a [href]="pexelPhoto.photographer_url" class="photo-photographer_url">{{pexelPhoto.photographer_url}}</a>
+    </div>
+</div>
+<div class="pager">Page {{pexelData?.page}} of {{pexelData?.total_results/6}}</div>
+<div class="pexels-pagination">
+    <div class="pexels-prev pagination" [class.disabled]="pexelData?.page == 1" (click)="getPexels({page: pexelData?.page-1})">PREV</div>
+    <div *ngIf="pexelData?.page-2 > 0" class="pexels-num pagination" (click)="getPexels({page: pexelData?.page-2})">{{pexelData?.page-2}}</div>
+    <div *ngIf="pexelData?.page-1 > 0" class="pexels-num pagination" (click)="getPexels({page: pexelData?.page-1})">{{pexelData?.page-1}}</div>
+    <div class="pexels-num pagination active" (click)="getPexels({page: pexelData?.page})">{{pexelData?.page}}</div>
+    <div *ngIf="pexelData?.page+1 <= pexelData?.total_results/6" class="pexels-num pagination" (click)="getPexels({page: pexelData?.page+1})">{{pexelData?.page+1}}</div>
+    <div *ngIf="pexelData?.page+2 <= pexelData?.total_results/6" class="pexels-num pagination" (click)="getPexels({page: pexelData?.page+2})">{{pexelData?.page+2}}</div>
+    <div class="pexels-next pagination" [class.disabled]="pexelData?.total_results == pexelData?.page" (click)="getPexels({page: pexelData?.page+1})">NEXT</div>
+</div>

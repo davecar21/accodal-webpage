@@ -1,3 +1,3 @@
 export const environment = {
-  TIME_API_LINK: 'https://www.timeapi.io'
+  PEXELS_API_KEY: 'nHVrN2dz1YBAmsVVGO1Gi16d8y6Ux8UyQ7i9yzebNesonx6EPa1W7BYO'
 };
